@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudoos | Sign Up</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="favicon" href="../assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Includes Header of the page -->
+    <%- include ('include/_header') %>
+    <main>
+        <br><br><br><br>
+        <h1 style="margin-left: 5%;">Admin Panel</h1>
+
+        <div class="container">
+            <!-- Deleting all users confirmation -->
+            <h2>Dangerous Operation</h2>
+            <br>
+            <p> Do you want to delete all users <b>?</b></p>
+
+            
+            <form action="/api/dash_delete_all" method="post">
+                <!-- to delete all users -->
+                
+                <a href="/dashboard" class="submit-btn">No</a>
+
+                <input type="submit" value="Yes" class="submit-btn" id="create-button" style="background-color: red;">
+
+            </form>
+
+        </div>
+
+    </main>
+</body>
+</html>

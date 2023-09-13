@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudoos | Sign Up</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="favicon" href="../assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Includes Header of the page -->
+    <%- include ('include/_header') %>
+    <main>
+        <br><br><br><br><br>
+        <h1 style="margin-left: 5%;">Admin Panel</h1>
+
+        <div class="container">
+            <!-- user addition Form For admin which uses an api to create new user -->
+            <h2>Add New User</h2>
+            
+            <form action="/api/dash_create" method="post">
+
+                <div class="input-field">
+                    <label for="name">
+                        Name <br>
+                        <input type="text" name="name" id="name">
+                    </label><br>
+                </div>
+                <br>
+                <div class="input-field">
+                    <label for="email">
+                        E-mail <br>
+                        <input type="email" name="mail" id="mail">
+                    </label><br>
+                </div>
+                <br>
+                <div class="input-field">
+                    <label for="password">
+                        Password <br>
+                        <input type="password" name="password" id="password">
+                    </label><br>
+                </div>
+                <br>
+
+                <input type="submit" value="Add User" class="submit-btn" id="create-button">
+
+                <a href="/dashboard" class="submit-btn">Go Back</a>
+                <br><br>
+
+            </form>
+
+        </div>
+
+    </main>
+</body>
+</html>

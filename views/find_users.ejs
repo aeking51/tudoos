@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudoos | Sign Up</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="favicon" href="../assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+        <!-- Includes Header of the page -->
+    <%- include ('include/_header') %>
+    <main>
+        <br><br><br><br><br>
+        <h1 style="margin-left: 5%;">Admin Panel</h1>
+
+        <div class="container">
+            <!-- this page is to find all users by name -->
+            <h2>Find Users</h2>
+            <form action="/find_user" method="post" style="margin-left: 10%;">
+                <label for="search"> Search Users </label>
+                <input type="text" name="search" id="search">
+                <br><br>
+                <input type="submit" value="Find" class="all_data_options">
+            </form>
+            <!-- shows the search result -->
+            <%typeof findUsers!="undefined" && findUsers.forEach(findUsers => { %>
+                <div class="user-item">
+                    <div class="fields"><%= findUsers.name %></div>
+                    <div class="fields"><%= findUsers.email %></div>
+                </div>
+            <% }); %>
+
+            <br><br><br>
+            <!-- Go to dashboard button -->
+            <a href="/dashboard" class="submit-btn">Go Back</a>
+            
+
+        </div>
+
+    </main>
+</body>
+</html>

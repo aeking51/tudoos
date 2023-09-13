@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudoos | Log In</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="favicon" href="../assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Includes Header of the page -->
+    <%- include ('include/_header') %>
+    <main>
+        <!-- This is the login page for users -->
+        <div class="container">
+
+            <h2>Login to account</h2>
+            <p class="if-account">If you don't have an account, <a href="/signup"><b>Create a new one here</b></a></p>
+            <br>
+            <!-- Login Form For users which uses an api to validate username and password -->
+            <form action="/api/login" method="post">
+
+                <div class="input-field">
+                    <!-- Each field is inside of a div for styling and given label to it -->
+                    <label for="username">
+                        Username
+                        <input type="text" name="mail" id="mail" placeholder="Username">
+                    </label>
+                </div>
+                <br>
+                <div class="input-field">
+                    <label for="password">
+                        Password
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </label>
+                </div>
+                <br>
+                <input type="submit" value="Sign In" class="submit-btn">
+
+                <br><br>
+
+            </form>
+            <!-- Social Authentication -->
+            <a href="/auth/google"><button id="gg-button"> Continue with Google</button></a><br>
+            <button id="fb-button"> Continue with Facebook</button>
+
+        </div>
+
+    </main>
+</body>
+</html>

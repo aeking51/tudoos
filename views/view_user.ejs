@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudoos | Sign Up</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="favicon" href="../assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+        <!-- Includes Header of the page -->
+    <%- include ('include/_header') %>
+    <main>
+        <br><br>
+        <div class="container">
+            <!-- This page view full user data using ejs -->
+            <h2><%= user.name %></h2>
+            <div class="fields"><%= user.email %></div><br>
+            <div><b>Created Time :  </b><%= user.createdAt %></div>
+            <div><b>Last User Updated :  </b><%= user.updatedAt %></div>
+            <br><br><br>
+            <!-- Go to dashboard -->
+            <a href="/dashboard" class="submit-btn">Go Back</a>
+        </div>
+    </main>
+</body>
+</html>

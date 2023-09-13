@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudoos | Sign Up</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="favicon" href="../assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Includes Header of the page -->
+    <%- include ('include/_header') %>
+    <main>
+        <!-- This is the Sign up page for users -->
+
+        <div class="container">
+            <h2>Create account</h2>
+            <p class="if-account">If you have an account, <a href="/login"><b>login here</b></a></p>
+            
+            <form action="/api/users" method="post">
+            <!-- Sign Up Form For users which uses an api to validates and store data to cloud DB-->
+
+
+            <!-- Each field is inside of a div for styling and given label to it -->
+                <div class="input-field">
+                    <label for="name">
+                        Name <br>
+                        <input type="text" name="name" id="name">
+                    </label><br>
+                    <!-- Shows Warning for name field-->
+                    <% if(typeof errors!="undefined" && errors.name ){ %>
+                        <span class="warn" id="name-warn"><%= errors.name.msg %></span>
+                    <% } %>
+                </div>
+                <br>
+                <div class="input-field">
+                    <label for="email">
+                        E-mail <br>
+                        <input type="email" name="mail" id="mail">
+                    </label><br>
+                    <!-- Shows Warning for email field-->
+                    <% if(typeof errors!="undefined" && errors.mail ){ %>
+                        <span class="warn" id="mail-warn"><%= errors.mail.msg %></span>
+                    <% } %>
+                </div>
+                <br>
+                <div class="input-field">
+                    <label for="password">
+                        Password <br>
+                        <input type="password" name="password" id="password">
+                    </label><br>
+                    <!-- Shows Warning for password field-->
+                    <% if(typeof errors!="undefined" && errors.password ){ %>
+                        <span class="warn" id="password-warn"><%= errors.password.msg %></span>
+                    <% } %>
+                </div>
+                <br>
+
+                <input type="submit" value="Create account" class="submit-btn" id="create-button">
+
+                <br><br>
+
+            </form>
+
+            <!-- Social Login -->
+            <a href="/auth/google"><button id="gg-button"> Continue with Google</button></a><br>
+            <button id="fb-button"> Continue with Facebook</button>
+
+        </div>
+
+    </main>
+</body>
+</html>

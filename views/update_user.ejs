@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudoos | Sign Up</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="favicon" href="../assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Includes Header of the page -->
+    <%- include ('include/_header') %>
+
+    <!-- This is the update user page for admin -->
+    <main>
+        <br><br><br><br><br>
+        <h1 style="margin-left: 5%;">Admin Panel</h1>
+
+        <div class="container">
+            <!-- Update user Form For users which uses an api update data to cloud DB -->
+            <h2>Update Full User Details</h2>
+            
+            <form action="/api/dash_update<%= id %>" method="post">
+
+                <!-- Each field is inside of a div for styling and given label to it -->
+                <div class="input-field">
+                    <label for="name">
+                        Name <br>
+                        <input type="text" name="name" id="name">
+                    </label><br>
+                </div>
+                <br>
+                <div class="input-field">
+                    <label for="email">
+                        E-mail <br>
+                        <input type="email" name="mail" id="mail">
+                    </label><br>
+                </div>
+                <br>
+                <div class="input-field">
+                    <label for="password">
+                        Password <br>
+                        <input type="password" name="password" id="password">
+                    </label><br>
+                    <% if(typeof errors!="undefined" && errors ){ %>
+                        <span class="warn" id="password-warn"><%= errors.msg %></span>
+                    <% } %>
+                </div>
+                <br>
+
+                <input type="submit" value="Update User" class="submit-btn" id="create-button">
+
+                <!-- Go back to dashboard -->
+                <a href="/dashboard" class="submit-btn">Go Back</a>
+                <br><br>
+
+            </form>
+
+        </div>
+
+    </main>
+</body>
+</html>

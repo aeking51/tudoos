@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudoos | Log In</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="favicon" href="../assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Includes Header of the page -->
+    <%- include ('include/_header') %>
+    <main>
+
+        <div class="container">
+
+            <!-- This is the login page for admin -->
+            <h2>Admin Login</h2>
+            <br>
+            <form action="/api/admin" method="post">
+
+                <!-- Login Form For admin which uses an api to validate username and password -->
+                <div class="input-field">
+                    <label for="username">
+                        Username
+                        <input type="text" name="username" id="username" placeholder="Username">
+                    </label>
+                </div>
+                <br>
+                <div class="input-field">
+                    <label for="password">
+                        Password
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </label>
+                </div>
+                <br>
+                <input type="submit" value="Sign In" class="submit-btn">
+
+                <br>
+            </form>
+
+        </div>
+
+    </main>
+</body>
+</html>

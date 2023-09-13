@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root{
+    --light-pink: #F9B4F6;
+    --dark-pink: #E983D8;
+    --color-1: #FFFF00;
+    --color-2: #5DF15D;
+    --head: 'Lobster', cursive;
+}
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header section style for included ejs header */
+header{
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    top:0;
+    text-align: center;
+    font-family: var(--head);
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    background: linear-gradient(var(--dark-pink),white);
+}
+a{
+    text-decoration: none;
+}
+.brand-title{
+    text-decoration: none;
+    color: black;
+}
+
+h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+}
+.if-account{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+.warn{
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 10px;
+}
+.container{
+    width: 40%;
+    margin: 100px auto;
+    padding: 30px;
+    border: 2px solid var(--dark-pink);
+    outline: var(--light-pink) solid 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.container:hover{
+    transition: 0.5s ease-in-out;
+    box-shadow: #8f008aad 0px 22px 70px 4px;
+}
+.input-field{
+    margin: 20px;
+}
+input[type="text"],input[type="email"],input[type="password"]{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10px;
+    width: 400px;
+    padding: 10px;
+    height: 40px;
+    border: 0;
+    border-bottom: 2px solid black;
+}
+.submit-btn{
+    background-color: var(--light-pink);
+    letter-spacing: 4px;
+    padding: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin: 20px;
+    width: 45%;
+}
+.submit-btn:hover{
+    transition: .5s ease-out;
+    letter-spacing: 10px;
+    width: 60%;
+}
+#fb-button{
+    background-color: rgb(25, 25, 159);
+    color: white;
+    border: 5px solid black;
+    padding: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 50px;
+    font-size: 20px;
+    margin: 20px;
+    width: 50%;
+}
+#fb-button:hover{
+    transition: .5s ease-out;
+    background-color: var(--light-pink);
+}
+#gg-button{
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    border: 5px solid black;
+    padding: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin: 20px;
+    width: 50%;
+}
+#gg-button:hover{
+    transition: .5s ease-out;
+    background-color: var(--light-pink);
+}
+.user-item{
+    margin: 20px 20%;
+    border: 1px saddlebrown solid;
+    padding: 10px 20px;
+    display: flex;
+    justify-items: space-around;
+}
+.fields{
+    margin: 0 30px;
+}
+
+.all_data_options{
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgb(102, 225, 212);
+    color: rgb(15, 13, 13);
+    
+}
+.dash-btn_grp{
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.vud_button_left{
+    margin-left: 200px;
+    margin-right: 0px;
+    padding: 8px;
+    background-color:aquamarine;
+}
+.vud_button_center{
+    padding: 8px;
+    background-color: #46b746;
+}
+.vud_button_right{
+    padding: 8px;
+    color: white;
+    background-color: darkred;
+}
+
+.user-logout-btn{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--color-2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    left: 90%;
+}
